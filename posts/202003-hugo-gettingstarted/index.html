@@ -164,9 +164,13 @@ origin	https://github.com/dailypr/dailyblog.git (push)</p>
 <ol>
 <li>add post</li>
 <li>hugo server and check locally</li>
-<li>rm path/to/submodule -rf</li>
-<li>rm .git/modules/path/to/module -rf</li>
+<li>rm -rf ~/Documents/0_git/dailyblog/dailyblog/public/</li>
+<li>rm -rf ~/Documents/0_git/dailyblog/.git/modules/dailyblog/public/</li>
+<li>git rm &ndash;cached public</li>
+<li>git submodule add -b master <a href="https://github.com/dailypr/dailypr.github.io.git">https://github.com/dailypr/dailypr.github.io.git</a> public</li>
 <li>hugo -D</li>
+<li>cd public  and push to git  ( git remote -v )</li>
+<li>cd ..  and push to git ( git remote -v )</li>
 </ol>
 
         </section>
