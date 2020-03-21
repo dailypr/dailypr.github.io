@@ -120,51 +120,66 @@
     </div>
   </nav>
 <section class="section is-medium">
-        <div class="container">
-          
-            
-              <h1 class="title section-title">git</h1>
-              <h5 class="subtitle is-5 is-muted"></h5>
-              <div class="divider"></div>        
-              <div class="section is-small">
-                <div class="columns">
-                    <div class="column is-4"><div class="box">
-      <figure class="image is-3by2">
-        <a href="/posts/git-rememberme/">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-centered-tablet-portrait">
+        <h1 class="title is-2 section-title">Hugo - Getting Started</h1>
+        <h5 class="subtitle is-5 is-muted"></h5>
+        <div class="divider"></div>
         
-          <img src="/images/default_summary_hu2be732aee21a2469ead3fe1f2df8caca_2088687_600x0_resize_q75_box.jpg" alt="">
-        
-        </a>
-      </figure>
-      <h3 class="title is-5 refresh-summary-title">
-        git-Remember me
-      </h3>
-      <p class="refresh-summary">git fetch &amp;ndash;all
-git rebase upstream/master
-git push origin master
-git add .
-git commit -m &amp;hellip;
-git push origin &amp;hellip;
-git remote -v
-git remote add upstream &amp;hellip;
-git submodule add &amp;hellip; &amp;hellip;
-git submodule add -b master &amp;hellip; &amp;hellip;
-</p> 
-      <div class="action has-text-right">
-        <a href="/posts/git-rememberme/" class="button is-primary">
-                Read more
-            </a>
+        <section class="section content has-text-justified">
+          <h2 id="getting-started---hugo">Getting Started - Hugo</h2>
+<p>Beginning&hellip;</p>
+<ol>
+<li>git clone <a href="https://github.com/dailypr/dailyblog.git">https://github.com/dailypr/dailyblog.git</a></li>
+<li>start from empty space</li>
+<li>hugo new site dailyblog</li>
+<li>cd dailyblog</li>
+<li>git submodule add <a href="https://github.com/PippoRJ/hugo-refresh.git">https://github.com/PippoRJ/hugo-refresh.git</a> themes/hugo-refresh</li>
+<li>rm config.toml</li>
+<li>curl -O <a href="https://raw.githubusercontent.com/PippoRJ/hugo-refresh/master/exampleSite/config.yaml">https://raw.githubusercontent.com/PippoRJ/hugo-refresh/master/exampleSite/config.yaml</a></li>
+<li>write post</li>
+<li>modify config</li>
+<li>hugo server and check locally</li>
+<li>rm -rf public</li>
+<li>git submodule add -b master <a href="https://github.com/dailypr/dailypr.github.io.git">https://github.com/dailypr/dailypr.github.io.git</a> public</li>
+<li>hugo -D</li>
+<li>cd public  and push to git  ( git remote -v )</li>
+</ol>
+<blockquote>
+<p>➜  public git:(master) git remote -v
+origin	https://github.com/dailypr/dailypr.github.io.git (fetch)
+origin	https://github.com/dailypr/dailypr.github.io.git (push)</p>
+</blockquote>
+<ol start="15">
+<li>cd ..  and push to git ( git remote -v )</li>
+</ol>
+<blockquote>
+<p>➜  dailyblog git:(master) ✗ git remote -v
+origin	https://github.com/dailypr/dailyblog.git (fetch)
+origin	https://github.com/dailypr/dailyblog.git (push)</p>
+</blockquote>
+<hr>
+<p>Add New Post</p>
+<ol>
+<li>add post</li>
+<li>hugo server and check locally</li>
+<li>rm path/to/submodule -rf</li>
+<li>rm .git/modules/path/to/module -rf</li>
+<li>hugo -D</li>
+</ol>
+
+        </section>
       </div>
     </div>
-  </div>
-
-                  </div>
-                
-              </div>
-            
-          
-        </div>
-    </section><footer class="footer footer-dark">
+  </div>  
+  <div class="container">
+    <div class="columns">
+      <div class="column has-text-right is-family-monospace is-centered-tablet-portrait">
+        Last modified:&nbsp;21 March 2020</div>
+    </div>
+  </div></section>
+<footer class="footer footer-dark">
   <div class="container">
     <div class="columns">
       <div class="column">
