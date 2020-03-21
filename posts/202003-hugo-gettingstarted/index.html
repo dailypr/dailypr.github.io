@@ -128,7 +128,8 @@
         <div class="divider"></div>
         
         <section class="section content has-text-justified">
-          <h2 id="getting-started---hugo">Getting Started - Hugo</h2>
+          <h1 id="getting-started---hugo">Getting Started - Hugo</h1>
+<hr>
 <p>Beginning&hellip;</p>
 <ol>
 <li>git clone <a href="https://github.com/dailypr/dailyblog.git">https://github.com/dailypr/dailyblog.git</a></li>
@@ -146,21 +147,17 @@
 <li>hugo -D</li>
 <li>cd public  and push to git  ( git remote -v )</li>
 </ol>
-<blockquote>
-<p>➜  public git:(master) git remote -v
-origin	https://github.com/dailypr/dailypr.github.io.git (fetch)
-origin	https://github.com/dailypr/dailypr.github.io.git (push)</p>
-</blockquote>
-<ol start="15">
+<pre><code> ➜  public git:(master) git remote -v
+ origin	https://github.com/dailypr/dailypr.github.io.git (fetch)
+ origin	https://github.com/dailypr/dailypr.github.io.git (push)
+</code></pre><ol start="15">
 <li>cd ..  and push to git ( git remote -v )</li>
 </ol>
-<blockquote>
-<p>➜  dailyblog git:(master) ✗ git remote -v
-origin	https://github.com/dailypr/dailyblog.git (fetch)
-origin	https://github.com/dailypr/dailyblog.git (push)</p>
-</blockquote>
+<pre><code> ➜  dailyblog git:(master) ✗ git remote -v
+ origin	https://github.com/dailypr/dailyblog.git (fetch)
+ origin	https://github.com/dailypr/dailyblog.git (push)
+</code></pre><h1 id="add-new-post">Add New Post</h1>
 <hr>
-<p>Add New Post</p>
 <ol>
 <li>add post</li>
 <li>hugo server and check locally</li>
@@ -172,7 +169,14 @@ origin	https://github.com/dailypr/dailyblog.git (push)</p>
 <li>cd public  and push to git  ( git remote -v )</li>
 <li>cd ..  and push to git ( git remote -v )</li>
 </ol>
-
+<h1 id="script">Script</h1>
+<hr>
+<pre><code>rm -rf ~/Documents/0_git/dailyblog/dailyblog/public/
+rm -rf ~/Documents/0_git/dailyblog/.git/modules/dailyblog/public/
+git rm --cached public
+git submodule add -b master https://github.com/dailypr/dailypr.github.io.git public
+hugo -D 
+</code></pre>
         </section>
       </div>
     </div>
