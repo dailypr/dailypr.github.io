@@ -120,143 +120,31 @@
     </div>
   </nav>
 <section class="section is-medium">
-        <div class="container">
-          
-            
-              <h1 class="title section-title">Posts</h1>
-              <h5 class="subtitle is-5 is-muted"></h5>
-              <div class="divider"></div>        
-              <div class="section is-small">
-                <div class="columns">
-                    <div class="column is-4"><div class="box">
-      <figure class="image is-3by2">
-        <a href="/posts/k8s-helm-rememberme/">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-centered-tablet-portrait">
+        <h1 class="title is-2 section-title">Helm - Remember me</h1>
+        <h5 class="subtitle is-5 is-muted"></h5>
+        <div class="divider"></div>
         
-          <img src="/images/default_summary_hu2be732aee21a2469ead3fe1f2df8caca_2088687_600x0_resize_q75_box.jpg" alt="">
-        
-        </a>
-      </figure>
-      <h3 class="title is-5 refresh-summary-title">
-        Helm - Remember me
-      </h3>
-      <p class="refresh-summary">Common helm ls
-helm get datadog-eks14
-helm delete [HELM RELEASE NAME]
-helm install ./test-chart &amp;ndash;name test-chart-release
-</p> 
-      <div class="action has-text-right">
-        <a href="/posts/k8s-helm-rememberme/" class="button is-primary">
-                Read more
-            </a>
-      </div>
-    </div>
-  </div>
-<div class="column is-4"><div class="box">
-      <figure class="image is-3by2">
-        <a href="/posts/k8s-multicluster-202003/">
-        
-          <img src="/images/default_summary_hu2be732aee21a2469ead3fe1f2df8caca_2088687_600x0_resize_q75_box.jpg" alt="">
-        
-        </a>
-      </figure>
-      <h3 class="title is-5 refresh-summary-title">
-        k8s - Managing Multi Clusters
-      </h3>
-      <p class="refresh-summary">Basic Way   Create config files in ~/.kube folder.  ~/.kube $ ll eu02d_config na03d_config na03s_config relengd_config Add below code to ~/.zshrc.  ##-------- k8s config export KUBECONFIG=~/.kube/config:~/.kube/na03s_config:~/.kube/relengd_config:~/.kube/eu02d_config:~/.kube/na03d_config:  source ~/.zshrc
-  Verify all the contexts using the command below.
-  $ kubectl config get-contexts CURRENT NAME CLUSTER AUTHINFO NAMESPACE eks14-eu02d_euwest1 eks14-eu02d_euwest1 eks14-eu02d_euwest1 eks14-na03d_useast2 eks14-na03d_useast2 eks14-na03d_useast2 eks14-na03s_useast2 eks14-na03s_useast2 eks14-na03s_useast2 * eks14-relengd_apnortheast2 eks14-relengd_apnortheast2 eks14-relengd_apnortheast2 Change the context using the command below and verify current context.  $ kubectl config use-context eks14-na03s_useast2 Switched to context &amp;quot;eks14-na03s_useast2&amp;quot;. $ kubectl config current-context eks14-na03s_useast2 Tool - kubectx   Install kubectx.   https://github.com/ahmetb/kubectx  Change context using kubectx command.  $ ~/kubectx eks14-eu02d_euwest1 eks14-na03d_useast2 eks14-na03s_useast2 eks14-relengd_apnortheast2 $ ~/kubectx eks14-na03s_useast2 Switched to context &amp;quot;eks14-na03s_useast2&amp;quot;. </p> 
-      <div class="action has-text-right">
-        <a href="/posts/k8s-multicluster-202003/" class="button is-primary">
-                Read more
-            </a>
-      </div>
-    </div>
-  </div>
-<div class="column is-4"><div class="box">
-      <figure class="image is-3by2">
-        <a href="/posts/k8s-kubectl-rememberme/">
-        
-          <img src="/images/default_summary_hu2be732aee21a2469ead3fe1f2df8caca_2088687_600x0_resize_q75_box.jpg" alt="">
-        
-        </a>
-      </figure>
-      <h3 class="title is-5 refresh-summary-title">
-        Kubectl - Remember me
-      </h3>
-      <p class="refresh-summary">Common kubectl get nodes
-kubectl describe nodes my-node
-kubectl get namespace
-kubectl get pods &amp;ndash;all-namespaces
-kubectl get pods &amp;ndash;namespace xxxx kubectl get pods -o wide kubectl get pod my-pod -o yaml kubectl describe pods my-pod
-kubectl get services
-kubectl get deployment my-dep
-</p> 
-      <div class="action has-text-right">
-        <a href="/posts/k8s-kubectl-rememberme/" class="button is-primary">
-                Read more
-            </a>
-      </div>
-    </div>
-  </div>
+        <section class="section content has-text-justified">
+          <h1 id="common">Common</h1>
+<p>helm ls</p>
+<p>helm get datadog-eks14</p>
+<p>helm delete [HELM RELEASE NAME]</p>
+<p>helm install ./test-chart &ndash;name test-chart-release</p>
 
-                          </div>
-                          <div class="columns">
-                            <div class="column is-4"><div class="box">
-      <figure class="image is-3by2">
-        <a href="/posts/git-rememberme/">
-        
-          <img src="/images/default_summary_hu2be732aee21a2469ead3fe1f2df8caca_2088687_600x0_resize_q75_box.jpg" alt="">
-        
-        </a>
-      </figure>
-      <h3 class="title is-5 refresh-summary-title">
-        git-Remember me
-      </h3>
-      <p class="refresh-summary">git fetch &amp;ndash;all
-git rebase upstream/master
-git push origin master
-git add .
-git commit -m &amp;hellip;
-git push origin &amp;hellip;
-git remote -v
-git remote add upstream &amp;hellip;
-git submodule add &amp;hellip; &amp;hellip;
-git submodule add -b master &amp;hellip; &amp;hellip;
-</p> 
-      <div class="action has-text-right">
-        <a href="/posts/git-rememberme/" class="button is-primary">
-                Read more
-            </a>
+        </section>
       </div>
     </div>
-  </div>
-<div class="column is-4"><div class="box">
-      <figure class="image is-3by2">
-        <a href="/posts/hugo-gettingstarted-202003/">
-        
-          <img src="/images/default_summary_hu2be732aee21a2469ead3fe1f2df8caca_2088687_600x0_resize_q75_box.jpg" alt="">
-        
-        </a>
-      </figure>
-      <h3 class="title is-5 refresh-summary-title">
-        Hugo - Getting Started
-      </h3>
-      <p class="refresh-summary">Getting Started - Hugo   git clone https://github.com/dailypr/dailyblog.git start from empty space hugo new site dailyblog cd dailyblog git submodule add https://github.com/PippoRJ/hugo-refresh.git themes/hugo-refresh rm config.toml curl -O https://raw.githubusercontent.com/PippoRJ/hugo-refresh/master/exampleSite/config.yaml write post modify config hugo server and check locally rm -rf public git submodule add -b master https://github.com/dailypr/dailypr.github.io.git public hugo -D cd public and push to git ( git remote -v )   ➜ public git:(master) git remote -v origin	https://github.com/dailypr/dailypr.github.io.git (fetch) origin	https://github.com/dailypr/dailypr.github.io.git (push) cd .. and push to git ( git remote -v )   ➜ dailyblog git:(master) ✗ git remote -v origin	https://github.com/dailypr/dailyblog.git (fetch) origin	https://github.com/dailypr/dailyblog.git (push) Add New Post   add post hugo server and check locally rm -rf ~/Documents/0_git/dailyblog/dailyblog/public/ rm -rf ~/Documents/0_git/dailyblog/.git/modules/dailyblog/public/ git rm &amp;ndash;cached public git submodule add -b master https://github.com/dailypr/dailypr.github.io.git public hugo -D cd public and push to git ( git remote -v ) cd .. and push to git ( git remote -v )  Script  rm -rf ~/Documents/0_git/dailyblog/dailyblog/public/ rm -rf ~/Documents/0_git/dailyblog/.git/modules/dailyblog/public/ git rm --cached public git submodule add -b master https://github.com/dailypr/dailypr.github.io.git public hugo -D cd public git add . git commit -m &amp;quot;release&amp;quot; git push origin mater </p> 
-      <div class="action has-text-right">
-        <a href="/posts/hugo-gettingstarted-202003/" class="button is-primary">
-                Read more
-            </a>
-      </div>
+  </div>  
+  <div class="container">
+    <div class="columns">
+      <div class="column has-text-right is-family-monospace is-centered-tablet-portrait">
+        Last modified:&nbsp;22 March 2020</div>
     </div>
-  </div>
-
-                  </div>
-                
-              </div>
-            
-          
-        </div>
-    </section><footer class="footer footer-dark">
+  </div></section>
+<footer class="footer footer-dark">
   <div class="container">
     <div class="columns">
       <div class="column">
