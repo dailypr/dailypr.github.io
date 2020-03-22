@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-	<meta name="generator" content="Hugo 0.67.1" /><meta charset="utf-8">
+  <head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge"><title>Daily Begin Again</title>
     
@@ -21,7 +20,7 @@
 
     <div id="preloader">
       <div id="status"></div>
-    </div><section class="hero is-fullheight is-default is-bold"><nav class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
+    </div><nav class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
 
@@ -120,23 +119,78 @@
   
     </div>
   </nav>
-<div class="hero-body">
-        <div class="container">
-            <div class="columns is-vcentered">
-            <div class="column is-5 is-offset-1 landing-caption">
-                <h1 class="title is-1 is-bold is-spaced">Daily Begin Again</h1><h2 class="subtitle is-5 is-muted">
-                Personal website and blog
-                </h2>
-            </div>
-            <div class="column is-5 is-offset-1">
-                <figure class="image"><img src="/images/avataaars.png" 
-                     style="width:500px" alt="Myself">
-                </figure>
-            </div>
-            </div>
-        </div>
-        </div>
-    </section><footer class="footer footer-dark">
+<section class="section is-medium">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-centered-tablet-portrait">
+        <h1 class="title is-2 section-title">Hugo - Getting Started</h1>
+        <h5 class="subtitle is-5 is-muted"></h5>
+        <div class="divider"></div>
+        
+        <section class="section content has-text-justified">
+          <h1 id="getting-started---hugo">Getting Started - Hugo</h1>
+<hr>
+<ol>
+<li>git clone <a href="https://github.com/dailypr/dailyblog.git">https://github.com/dailypr/dailyblog.git</a></li>
+<li>start from empty space</li>
+<li>hugo new site dailyblog</li>
+<li>cd dailyblog</li>
+<li>git submodule add <a href="https://github.com/PippoRJ/hugo-refresh.git">https://github.com/PippoRJ/hugo-refresh.git</a> themes/hugo-refresh</li>
+<li>rm config.toml</li>
+<li>curl -O <a href="https://raw.githubusercontent.com/PippoRJ/hugo-refresh/master/exampleSite/config.yaml">https://raw.githubusercontent.com/PippoRJ/hugo-refresh/master/exampleSite/config.yaml</a></li>
+<li>write post</li>
+<li>modify config</li>
+<li>hugo server and check locally</li>
+<li>rm -rf public</li>
+<li>git submodule add -b master <a href="https://github.com/dailypr/dailypr.github.io.git">https://github.com/dailypr/dailypr.github.io.git</a> public</li>
+<li>hugo -D</li>
+<li>cd public  and push to git  ( git remote -v )</li>
+</ol>
+<pre><code> ➜  public git:(master) git remote -v
+ origin	https://github.com/dailypr/dailypr.github.io.git (fetch)
+ origin	https://github.com/dailypr/dailypr.github.io.git (push)
+</code></pre><ol start="15">
+<li>cd ..  and push to git ( git remote -v )</li>
+</ol>
+<pre><code> ➜  dailyblog git:(master) ✗ git remote -v
+ origin	https://github.com/dailypr/dailyblog.git (fetch)
+ origin	https://github.com/dailypr/dailyblog.git (push)
+</code></pre><h1 id="add-new-post">Add New Post</h1>
+<hr>
+<ol>
+<li>add post</li>
+<li>hugo server and check locally</li>
+<li>rm -rf ~/Documents/0_git/dailyblog/dailyblog/public/</li>
+<li>rm -rf ~/Documents/0_git/dailyblog/.git/modules/dailyblog/public/</li>
+<li>git rm &ndash;cached public</li>
+<li>git submodule add -b master <a href="https://github.com/dailypr/dailypr.github.io.git">https://github.com/dailypr/dailypr.github.io.git</a> public</li>
+<li>hugo -D</li>
+<li>cd public  and push to git  ( git remote -v )</li>
+<li>cd ..  and push to git ( git remote -v )</li>
+</ol>
+<h1 id="script">Script</h1>
+<hr>
+<pre><code>rm -rf ~/Documents/0_git/dailyblog/dailyblog/public/
+rm -rf ~/Documents/0_git/dailyblog/.git/modules/dailyblog/public/
+git rm --cached public
+git submodule add -b master https://github.com/dailypr/dailypr.github.io.git public
+hugo -D 
+cd public
+git add .
+git commit -m &quot;release&quot;
+git push origin mater
+</code></pre>
+        </section>
+      </div>
+    </div>
+  </div>  
+  <div class="container">
+    <div class="columns">
+      <div class="column has-text-right is-family-monospace is-centered-tablet-portrait">
+        Last modified:&nbsp;21 March 2020</div>
+    </div>
+  </div></section>
+<footer class="footer footer-dark">
   <div class="container">
     <div class="columns">
       <div class="column">

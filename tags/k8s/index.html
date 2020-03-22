@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta http-equiv="x-ua-compatible" content="ie=edge"><title>Daily Beging Again</title>
+<meta http-equiv="x-ua-compatible" content="ie=edge"><title>Daily Begin Again</title>
     
 <link rel="icon" type="image/png" href="/images/favicon.png" />
 
@@ -130,20 +130,20 @@
                 <div class="columns">
                     <div class="column is-4"><div class="box">
       <figure class="image is-3by2">
-        <a href="/posts/k8s-rememberme/">
+        <a href="/posts/k8s-multicluster-202003/">
         
           <img src="/images/default_summary_hu2be732aee21a2469ead3fe1f2df8caca_2088687_600x0_resize_q75_box.jpg" alt="">
         
         </a>
       </figure>
       <h3 class="title is-5 refresh-summary-title">
-        k8s-Remember me
+        k8s - Managing Multi Clusters
       </h3>
-      <p class="refresh-summary">kubectl get services
-kubectl get pods &amp;ndash;all-namespaces
-</p> 
+      <p class="refresh-summary"> Create config files in ~/.kube folder.  ~/.kube $ ll eu02d_config na03d_config na03s_config relengd_config Add below code to ~/.zshrc.  ##-------- k8s config export KUBECONFIG=~/.kube/config:~/.kube/na03s_config:~/.kube/relengd_config:~/.kube/eu02d_config:~/.kube/na03d_config:  source ~/.zshrc
+  Verify all the contexts using the command below.
+  $ kubectl config get-contexts CURRENT NAME CLUSTER AUTHINFO NAMESPACE eks14-eu02d_euwest1 eks14-eu02d_euwest1 eks14-eu02d_euwest1 eks14-na03d_useast2 eks14-na03d_useast2 eks14-na03d_useast2 eks14-na03s_useast2 eks14-na03s_useast2 eks14-na03s_useast2 * eks14-relengd_apnortheast2 eks14-relengd_apnortheast2 eks14-relengd_apnortheast2 Change the context using the command below and verify current context.  $ kubectl config use-context eks14-na03s_useast2 Switched to context &amp;quot;eks14-na03s_useast2&amp;quot;. $ kubectl config current-context eks14-na03s_useast2  Install kubectx.   https://github.com/ahmetb/kubectx  Change context using kubectx command.  $ ~/kubectx eks14-eu02d_euwest1 eks14-na03d_useast2 eks14-na03s_useast2 eks14-relengd_apnortheast2 $ ~/kubectx eks14-na03s_useast2 Switched to context &amp;quot;eks14-na03s_useast2&amp;quot;. </p> 
       <div class="action has-text-right">
-        <a href="/posts/k8s-rememberme/" class="button is-primary">
+        <a href="/posts/k8s-multicluster-202003/" class="button is-primary">
                 Read more
             </a>
       </div>
@@ -228,7 +228,7 @@ kubectl get pods &amp;ndash;all-namespaces
             <li>
               <a>
                 <span class="icon"><i class="fa fa-copyright"></i></span>
-                Julia The White - 2020
+                Daily Begin Again - 2020
               </a>
             </li>
           </ul>
@@ -270,7 +270,7 @@ kubectl get pods &amp;ndash;all-namespaces
                   <tr>
                     <td class=""><span class="icon"><i class="fa fa-cube"></i></span>cmd</td>
                     <td class="has-text-right" >
-                        <div class="tag-number">2</div>
+                        <div class="tag-number">1</div>
                       
                     </td>
                     
@@ -287,6 +287,24 @@ kubectl get pods &amp;ndash;all-namespaces
               <table width="100%">  
                   <tr>
                     <td class=""><span class="icon"><i class="fa fa-cube"></i></span>git</td>
+                    <td class="has-text-right" >
+                        <div class="tag-number">1</div>
+                      
+                    </td>
+                    
+                  </tr>
+              </table>
+              
+            </div>
+          </a>
+      </li>
+      <li class="no-children">
+          <a href="/tags/hugo">
+            <div class="columns">
+              
+              <table width="100%">  
+                  <tr>
+                    <td class=""><span class="icon"><i class="fa fa-cube"></i></span>hugo</td>
                     <td class="has-text-right" >
                         <div class="tag-number">1</div>
                       
