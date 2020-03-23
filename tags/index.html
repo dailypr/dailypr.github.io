@@ -170,6 +170,7 @@ kubectl get pods &amp;ndash;all-namespaces
 kubectl get pods &amp;ndash;namespace xxxx kubectl get pods -o wide kubectl get pod my-pod -o yaml kubectl describe pods my-pod
 kubectl get services
 kubectl get deployment my-dep
+kubectl get rs &amp;ndash;all-namespaces
 </p> 
       <div class="action has-text-right">
         <a href="/posts/k8s-kubectl-rememberme/" class="button is-primary">
@@ -318,7 +319,7 @@ helm install ./test-chart &amp;ndash;name test-chart-release
       <h3 class="title is-5 refresh-summary-title">
         Hugo - Getting Started
       </h3>
-      <p class="refresh-summary">Getting Started - Hugo   git clone https://github.com/dailypr/dailyblog.git start from empty space hugo new site dailyblog cd dailyblog git submodule add https://github.com/PippoRJ/hugo-refresh.git themes/hugo-refresh rm config.toml curl -O https://raw.githubusercontent.com/PippoRJ/hugo-refresh/master/exampleSite/config.yaml write post modify config hugo server and check locally rm -rf public git submodule add -b master https://github.com/dailypr/dailypr.github.io.git public hugo -D cd public and push to git ( git remote -v )   ➜ public git:(master) git remote -v origin	https://github.com/dailypr/dailypr.github.io.git (fetch) origin	https://github.com/dailypr/dailypr.github.io.git (push) cd .. and push to git ( git remote -v )   ➜ dailyblog git:(master) ✗ git remote -v origin	https://github.com/dailypr/dailyblog.git (fetch) origin	https://github.com/dailypr/dailyblog.git (push) Add New Post   add post hugo server and check locally rm -rf ~/Documents/0_git/dailyblog/dailyblog/public/ rm -rf ~/Documents/0_git/dailyblog/.git/modules/dailyblog/public/ git rm &amp;ndash;cached public git submodule add -b master https://github.com/dailypr/dailypr.github.io.git public hugo -D cd public and push to git ( git remote -v ) cd .. and push to git ( git remote -v )  Script  rm -rf ~/Documents/0_git/dailyblog/dailyblog/public/ rm -rf ~/Documents/0_git/dailyblog/.git/modules/dailyblog/public/ git rm --cached public git submodule add -b master https://github.com/dailypr/dailypr.github.io.git public hugo -D cd public git add . git commit -m &amp;quot;release&amp;quot; git push origin mater </p> 
+      <p class="refresh-summary">Getting Started - Hugo   git clone https://github.com/dailypr/dailyblog.git start from empty space hugo new site dailyblog cd dailyblog git submodule add https://github.com/PippoRJ/hugo-refresh.git themes/hugo-refresh rm config.toml curl -O https://raw.githubusercontent.com/PippoRJ/hugo-refresh/master/exampleSite/config.yaml write post modify config hugo server and check locally rm -rf public git submodule add -b master https://github.com/dailypr/dailypr.github.io.git public hugo -D cd public and push to git ( git remote -v )   ➜ public git:(master) git remote -v origin	https://github.com/dailypr/dailypr.github.io.git (fetch) origin	https://github.com/dailypr/dailypr.github.io.git (push) cd .. and push to git ( git remote -v )   ➜ dailyblog git:(master) ✗ git remote -v origin	https://github.com/dailypr/dailyblog.git (fetch) origin	https://github.com/dailypr/dailyblog.git (push) Add New Post   add post hugo server and check locally rm -rf ~/Documents/0_git/dailyblog/dailyblog/public/ rm -rf ~/Documents/0_git/dailyblog/.git/modules/dailyblog/public/ git rm &amp;ndash;cached public git submodule add -b master https://github.com/dailypr/dailypr.github.io.git public hugo -D cd public and push to git ( git remote -v ) cd .. and push to git ( git remote -v )  Script  rm -rf ~/Documents/0_git/dailyblog/dailyblog/public/ rm -rf ~/Documents/0_git/dailyblog/.git/modules/dailyblog/public/ git rm --cached public git submodule add -b master https://github.com/dailypr/dailypr.github.io.git public cd public rm -rf * cd .. hugo -D cd public git add . git commit -m &amp;quot;release&amp;quot; git push origin mater </p> 
       <div class="action has-text-right">
         <a href="/posts/hugo-gettingstarted-202003/" class="button is-primary">
                 Read more
@@ -397,9 +398,45 @@ kubectl get pods &amp;ndash;all-namespaces
 kubectl get pods &amp;ndash;namespace xxxx kubectl get pods -o wide kubectl get pod my-pod -o yaml kubectl describe pods my-pod
 kubectl get services
 kubectl get deployment my-dep
+kubectl get rs &amp;ndash;all-namespaces
 </p> 
       <div class="action has-text-right">
         <a href="/posts/k8s-kubectl-rememberme/" class="button is-primary">
+                Read more
+            </a>
+      </div>
+    </div>
+  </div>
+</div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </section><section class="section">
+                    <div class="container">
+                        <div class="columns">
+                        <div class="column is-centered-tablet-portrait">
+                            <h1 class="title section-title">python</h1>
+                            <h5 class="subtitle is-5 is-muted"></h5>
+                            <div class="divider"></div>        
+                            <div class="section">
+                            <div class="container">
+                                <div class="columns"></div>
+                                        <div class="columns"><div class="column is-4"><div class="box">
+      <figure class="image is-3by2">
+        <a href="/posts/python-basic/">
+        
+          <img src="/images/default_summary_hu2be732aee21a2469ead3fe1f2df8caca_2088687_600x0_resize_q75_box.jpg" alt="">
+        
+        </a>
+      </figure>
+      <h3 class="title is-5 refresh-summary-title">
+        Python Basic
+      </h3>
+      <p class="refresh-summary">How to handle json file  If you want to get PublicIp from the json file below &amp;hellip;  $ test.json { &amp;quot;NatGateways&amp;quot;: [ { &amp;quot;NatGatewayAddresses&amp;quot;: [ { &amp;quot;PublicIp&amp;quot;: &amp;quot;&amp;quot;, &amp;quot;NetworkInterfaceId&amp;quot;: &amp;quot;&amp;quot;, &amp;quot;AllocationId&amp;quot;: &amp;quot;&amp;quot;, &amp;quot;PrivateIp&amp;quot;: &amp;quot; } ], &amp;quot;VpcId&amp;quot;: &amp;quot;, &amp;quot;Tags&amp;quot;: [], &amp;quot;State&amp;quot;: &amp;quot;&amp;quot;, &amp;quot;NatGatewayId&amp;quot;: &amp;quot;&amp;quot;, &amp;quot;SubnetId&amp;quot;: &amp;quot;&amp;quot;, &amp;quot;CreateTime&amp;quot;: &amp;quot;2&amp;quot; }, { &amp;quot;NatGatewayAddresses&amp;quot;: [ { &amp;quot;PublicIp&amp;quot;: &amp;quot;&amp;quot;, &amp;quot;NetworkInterfaceId&amp;quot;: &amp;quot;&amp;quot;, &amp;quot;AllocationId&amp;quot;: “”, &amp;quot;PrivateIp&amp;quot;: &amp;quot;&amp;quot; } ], &amp;quot;VpcId&amp;quot;: &amp;quot;&amp;quot;, &amp;quot;Tags&amp;quot;: [], &amp;quot;State&amp;quot;: &amp;quot;&amp;quot;, &amp;quot;NatGatewayId&amp;quot;: &amp;quot;&amp;quot;, &amp;quot;SubnetId&amp;quot;: &amp;quot;&amp;quot;, &amp;quot;CreateTime&amp;quot;: &amp;quot;&amp;quot; } ] } import json with open(&#39;iot-releng-seoul.json&#39;) as json_file: json_data = json.load(json_file) for nat in json_data[&#39;NatGateways&#39;]: print( nat[&#39;VpcId&#39;] ,nat[&#39;NatGatewayAddresses&#39;][0][&#39;PublicIp&#39;] ) </p> 
+      <div class="action has-text-right">
+        <a href="/posts/python-basic/" class="button is-primary">
                 Read more
             </a>
       </div>
@@ -616,6 +653,24 @@ kubectl get deployment my-dep
               <table width="100%">  
                   <tr>
                     <td class=""><span class="icon"><i class="fa fa-cube"></i></span>kubectl</td>
+                    <td class="has-text-right" >
+                        <div class="tag-number">1</div>
+                      
+                    </td>
+                    
+                  </tr>
+              </table>
+              
+            </div>
+          </a>
+      </li>
+      <li class="no-children">
+          <a href="/tags/python">
+            <div class="columns">
+              
+              <table width="100%">  
+                  <tr>
+                    <td class=""><span class="icon"><i class="fa fa-cube"></i></span>python</td>
                     <td class="has-text-right" >
                         <div class="tag-number">1</div>
                       
