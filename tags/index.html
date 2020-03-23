@@ -141,9 +141,12 @@
         Helm - Remember me
       </h3>
       <p class="refresh-summary">Common helm ls
+helm ls &amp;ndash;all
 helm get datadog-eks14
-helm delete [HELM RELEASE NAME]
+helm delete [HELM RELEASE NAME] helm del &amp;ndash;purge xxxxx
 helm install ./test-chart &amp;ndash;name test-chart-release
+helm install -f ./xxxxxx/values.yaml &amp;ndash;name xxxxxxx ./xxxxxx
+helm uninstall
 </p> 
       <div class="action has-text-right">
         <a href="/posts/k8s-helm-rememberme/" class="button is-primary">
@@ -169,6 +172,7 @@ kubectl get namespace
 kubectl get pods &amp;ndash;all-namespaces
 kubectl get pods &amp;ndash;namespace xxxx kubectl get pods -o wide kubectl get pod my-pod -o yaml kubectl describe pods my-pod
 kubectl get services
+kubectl get svc
 kubectl get deployment my-dep
 kubectl get rs &amp;ndash;all-namespaces
 </p> 
@@ -281,9 +285,12 @@ git submodule add -b master &amp;hellip; &amp;hellip;
         Helm - Remember me
       </h3>
       <p class="refresh-summary">Common helm ls
+helm ls &amp;ndash;all
 helm get datadog-eks14
-helm delete [HELM RELEASE NAME]
+helm delete [HELM RELEASE NAME] helm del &amp;ndash;purge xxxxx
 helm install ./test-chart &amp;ndash;name test-chart-release
+helm install -f ./xxxxxx/values.yaml &amp;ndash;name xxxxxxx ./xxxxxx
+helm uninstall
 </p> 
       <div class="action has-text-right">
         <a href="/posts/k8s-helm-rememberme/" class="button is-primary">
@@ -397,6 +404,7 @@ kubectl get namespace
 kubectl get pods &amp;ndash;all-namespaces
 kubectl get pods &amp;ndash;namespace xxxx kubectl get pods -o wide kubectl get pod my-pod -o yaml kubectl describe pods my-pod
 kubectl get services
+kubectl get svc
 kubectl get deployment my-dep
 kubectl get rs &amp;ndash;all-namespaces
 </p> 

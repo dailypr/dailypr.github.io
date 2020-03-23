@@ -140,9 +140,12 @@
         Helm - Remember me
       </h3>
       <p class="refresh-summary">Common helm ls
+helm ls &amp;ndash;all
 helm get datadog-eks14
-helm delete [HELM RELEASE NAME]
+helm delete [HELM RELEASE NAME] helm del &amp;ndash;purge xxxxx
 helm install ./test-chart &amp;ndash;name test-chart-release
+helm install -f ./xxxxxx/values.yaml &amp;ndash;name xxxxxxx ./xxxxxx
+helm uninstall
 </p> 
       <div class="action has-text-right">
         <a href="/posts/k8s-helm-rememberme/" class="button is-primary">

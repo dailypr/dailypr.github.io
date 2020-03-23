@@ -129,10 +129,14 @@
         
         <section class="section content has-text-justified">
           <h1 id="common">Common</h1>
-<p>helm ls</p>
+<p>helm ls<br>
+helm ls  &ndash;all</p>
 <p>helm get datadog-eks14</p>
-<p>helm delete [HELM RELEASE NAME]</p>
-<p>helm install ./test-chart &ndash;name test-chart-release</p>
+<p>helm delete [HELM RELEASE NAME]
+helm del &ndash;purge xxxxx</p>
+<p>helm install ./test-chart &ndash;name test-chart-release<br>
+helm install -f ./xxxxxx/values.yaml &ndash;name xxxxxxx ./xxxxxx</p>
+<p>helm uninstall</p>
 
         </section>
       </div>
