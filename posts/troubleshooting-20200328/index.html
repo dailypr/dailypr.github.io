@@ -129,10 +129,12 @@
         
         <section class="section content has-text-justified">
           <h1 id="issue">Issue</h1>
-<pre><code>[error] proxy: pass request body failed to xx.xx.xx.xx:443 (xxxxxxxxx.com) from xx.xx.xx.xx
-[Fri Mar 27 04:32:38 2020] [error] (502)Unknown error 502: proxy: pass request body failed to xx.xx.xx.xx:443 (xxxxxxxxx.com)
-[Fri Mar 27 04:32:38 2020] [error] [client xx.xx.xx.xx] proxy: Error during SSL Handshake with remote server 
-</code></pre><h1 id="troubleshooting">Troubleshooting</h1>
+<blockquote>
+<p>[error] proxy: pass request body failed to xx.xx.xx.xx:443 (xxxxxxxxx.com) from xx.xx.xx.xx
+[Fri Mar 27 04:32:38 2020] [error] (502)Unknown error 502: proxy: pass request body failed to xx.xx.xx.xx:443 &gt; &gt;  (xxxxxxxxx.com)
+[Fri Mar 27 04:32:38 2020] [error] [client xx.xx.xx.xx] proxy: Error during SSL Handshake with remote server</p>
+</blockquote>
+<h1 id="troubleshooting">Troubleshooting</h1>
 <ol>
 <li>DNS lookup of ALB produces only 2 current IP addresses</li>
 </ol>
@@ -142,24 +144,32 @@ xx.xx.xx.xx
 </code></pre><ol start="2">
 <li>Contact AWS Support Center in order to get ALB node addresses, and had the answer below</li>
 </ol>
-<pre><code>Issued IP address was removed by the ELB controller from DNS since ...., 
-in other words your client is trying to ssl handshake to an IP that is not currently in service. 
-</code></pre><ol start="3">
+<blockquote>
+<p>Issued IP address was removed by the ELB controller from DNS since &hellip;.,
+in other words your client is trying to ssl handshake to an IP that is not currently in service.</p>
+</blockquote>
+<ol start="3">
 <li>Need to remember</li>
 </ol>
-<pre><code>Please note that the 4 IPs you shared: xx,xx,xx,xx , xx.xx.xx.xx , xx.xx.xx.xx  , xx.xx.xx.xx , 
-are stable IPs that the ELB can use if it needs to scale, 
-this doesn't mean that all 6 IPs are always in use,  &lt;---------------
-this just means that if the ELB needs an IP it would pick from that pool of 6 IPs.
-</code></pre><ol start="4">
+<blockquote>
+<p>Please note that the 4 IPs you shared: xx,xx,xx,xx , xx.xx.xx.xx , xx.xx.xx.xx  , xx.xx.xx.xx ,
+are stable IPs that the ELB can use if it needs to scale,
+this doesn&rsquo;t mean that all 6 IPs are always in use,  &lt;&mdash;&mdash;&mdash;&mdash;&mdash;
+this just means that if the ELB needs an IP it would pick from that pool of 6 IPs.</p>
+</blockquote>
+<ol start="4">
 <li>Check with client team</li>
 </ol>
-<pre><code>I suspect that your clients either have bad dns behaviour (i.e cahing dns ips for long/not respecting the ttl) or they have hardcoded DNS values (e.g in the /etc/hosts file) or they have hardcoded IP addresses. 
-</code></pre><p>a) Get your client to do a dns lookup from the ssl failing maching and see the IP address returned, use the below:</p>
+<blockquote>
+<p>I suspect that your clients either have bad dns behaviour (i.e cahing dns ips for long/not respecting the ttl) or they have hardcoded DNS values (e.g in the /etc/hosts file) or they have hardcoded IP addresses.</p>
+</blockquote>
+<pre><code>- a) Get your client to do a dns lookup from the ssl failing maching and see the IP address returned, use the below:   
+</code></pre>
 <p><code>$ dig xxx alb dns address xxxxx  +short</code></p>
-<p>b) If a) above shows the 2 current running ELB IPs then can you get your client to run a packet capture when trying to do the ssl handshake ? Use the below:</p>
+<pre><code>- b) If a) above shows the 2 current running ELB IPs then can you get your client to run a packet capture when trying to do the ssl handshake ? Use the below: 
+(Example: sudo  tcpdump host google.com and port 443 -w ssl.pcap)   
+</code></pre>
 <p><code>sudo  tcpdump host {dns name used to reach alb} and port 443 -w ssl.pcap</code></p>
-<p>(Example: sudo  tcpdump host google.com and port 443 -w ssl.pcap)</p>
 
         </section>
       </div>
