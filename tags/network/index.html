@@ -148,8 +148,7 @@ $ dig xxxxx alb dns xxxxx &#43;short xx.xx.xx.xx xx.xx.xx.xx   Contact AWS Suppo
    Need to remember
  Please note that the 4 IPs you shared: xx,xx,xx,xx , xx.xx.xx.xx , xx.xx.xx.xx , xx.xx.xx.xx ,
 are stable IPs that the ELB can use if it needs to scale,
-this doesn&amp;rsquo;t mean that all 6 IPs are always in use, &amp;lt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
-this just means that if the ELB needs an IP it would pick from that pool of 6 IPs.
+this doesn&#39;t mean that all 6 IPs are always in use, this just means that if the ELB needs an IP it would pick from that pool of 6 IPs.
    Check with client team
  I suspect that your clients either have bad dns behaviour (i.e cahing dns ips for long/not respecting the ttl) or they have hardcoded DNS values (e.g in the /etc/hosts file) or they have hardcoded IP addresses.
    Get your client to do a dns lookup from the ssl failing maching and see the IP address returned, use the below:
