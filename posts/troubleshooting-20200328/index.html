@@ -163,12 +163,10 @@ this just means that if the ELB needs an IP it would pick from that pool of 6 IP
 <blockquote>
 <p>I suspect that your clients either have bad dns behaviour (i.e cahing dns ips for long/not respecting the ttl) or they have hardcoded DNS values (e.g in the /etc/hosts file) or they have hardcoded IP addresses.</p>
 </blockquote>
-<pre><code>- a) Get your client to do a dns lookup from the ssl failing maching and see the IP address returned, use the below:   
-</code></pre>
+<p>a) Get your client to do a dns lookup from the ssl failing maching and see the IP address returned, use the below:</p>
 <p><code>$ dig xxx alb dns address xxxxx  +short</code></p>
-<pre><code>- b) If a) above shows the 2 current running ELB IPs then can you get your client to run a packet capture when trying to do the ssl handshake ? Use the below: 
-(Example: sudo  tcpdump host google.com and port 443 -w ssl.pcap)   
-</code></pre>
+<p>b) If a) above shows the 2 current running ELB IPs then can you get your client to run a packet capture when trying to do the ssl handshake ? Use the below:<br>
+(Example: sudo  tcpdump host google.com and port 443 -w ssl.pcap)</p>
 <p><code>sudo  tcpdump host {dns name used to reach alb} and port 443 -w ssl.pcap</code></p>
 
         </section>
